@@ -18,3 +18,8 @@ app.secret_key = b'HO\xf8\xff+\n\x1e\\~/;}'
 @app.route('/index')
 def index():
     return render_template('index.html')
+
+@app.route('/random')
+def jeopardy_random():
+    #Use jservice API/random to get one jeopardy clue
+    return render_template("random_clue.html")
