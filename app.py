@@ -21,5 +21,4 @@ def index():
 
 @app.route('/random')
 def jeopardy_random():
-    #Use jservice API/random to get one jeopardy clue
-    return render_template("random_clue.html")
+    return render_template("/random_clue.html", data=model.random_question())
